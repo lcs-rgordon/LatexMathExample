@@ -1,0 +1,6 @@
+module Pods_LatexMathExample {
+  umbrella header "Pods-LatexMathExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
