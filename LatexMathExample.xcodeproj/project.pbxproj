@@ -11,6 +11,8 @@
 		0E233359275FC3870078F5AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E233358275FC3870078F5AD /* ContentView.swift */; };
 		0E23335B275FC3890078F5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E23335A275FC3890078F5AD /* Assets.xcassets */; };
 		0E23335E275FC3890078F5AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E23335D275FC3890078F5AD /* Preview Assets.xcassets */; };
+		0EE1827E275FCFBA00B3C63F /* MathTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE1827D275FCFBA00B3C63F /* MathTextView.swift */; };
+		79329DD46E67E7B1C18F62C8 /* libPods-LatexMathExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25394C0EBEF27FDEC2DD7912 /* libPods-LatexMathExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,10 @@
 		0E233358275FC3870078F5AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E23335A275FC3890078F5AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E23335D275FC3890078F5AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0EE1827D275FCFBA00B3C63F /* MathTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTextView.swift; sourceTree = "<group>"; };
+		25394C0EBEF27FDEC2DD7912 /* libPods-LatexMathExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LatexMathExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26415466987CB70E40D5F73F /* Pods-LatexMathExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LatexMathExample.release.xcconfig"; path = "Target Support Files/Pods-LatexMathExample/Pods-LatexMathExample.release.xcconfig"; sourceTree = "<group>"; };
+		4A74A0268A0E2F7078D4D38D /* Pods-LatexMathExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LatexMathExample.debug.xcconfig"; path = "Target Support Files/Pods-LatexMathExample/Pods-LatexMathExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +32,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79329DD46E67E7B1C18F62C8 /* libPods-LatexMathExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C184B6114EE4E15D113D1AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A74A0268A0E2F7078D4D38D /* Pods-LatexMathExample.debug.xcconfig */,
+				26415466987CB70E40D5F73F /* Pods-LatexMathExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		0E23334A275FC3860078F5AD = {
 			isa = PBXGroup;
 			children = (
 				0E233355275FC3870078F5AD /* LatexMathExample */,
 				0E233354275FC3870078F5AD /* Products */,
+				0C184B6114EE4E15D113D1AC /* Pods */,
+				317AE1B600CBCBD5E8118C77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				0E233356275FC3870078F5AD /* LatexMathExampleApp.swift */,
-				0E233358275FC3870078F5AD /* ContentView.swift */,
+				0EE1827C275FCFAC00B3C63F /* Views */,
 				0E23335A275FC3890078F5AD /* Assets.xcassets */,
 				0E23335C275FC3890078F5AD /* Preview Content */,
 			);
@@ -67,6 +85,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0EE1827C275FCFAC00B3C63F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E233358275FC3870078F5AD /* ContentView.swift */,
+				0EE1827F275FD0F700B3C63F /* Helpers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0EE1827F275FD0F700B3C63F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0EE1827D275FCFBA00B3C63F /* MathTextView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		317AE1B600CBCBD5E8118C77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25394C0EBEF27FDEC2DD7912 /* libPods-LatexMathExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E233361275FC3890078F5AD /* Build configuration list for PBXNativeTarget "LatexMathExample" */;
 			buildPhases = (
+				52711204AD7DE71DCF09B797 /* [CP] Check Pods Manifest.lock */,
 				0E23334F275FC3870078F5AD /* Sources */,
 				0E233350275FC3870078F5AD /* Frameworks */,
 				0E233351275FC3870078F5AD /* Resources */,
+				72B52AD365DF17ECD6EAC6EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,11 +177,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52711204AD7DE71DCF09B797 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LatexMathExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B52AD365DF17ECD6EAC6EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LatexMathExample/Pods-LatexMathExample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LatexMathExample/Pods-LatexMathExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LatexMathExample/Pods-LatexMathExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0E23334F275FC3870078F5AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EE1827E275FCFBA00B3C63F /* MathTextView.swift in Sources */,
 				0E233359275FC3870078F5AD /* ContentView.swift in Sources */,
 				0E233357275FC3870078F5AD /* LatexMathExampleApp.swift in Sources */,
 			);
@@ -263,6 +351,7 @@
 		};
 		0E233362275FC3890078F5AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A74A0268A0E2F7078D4D38D /* Pods-LatexMathExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +381,7 @@
 		};
 		0E233363275FC3890078F5AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26415466987CB70E40D5F73F /* Pods-LatexMathExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
